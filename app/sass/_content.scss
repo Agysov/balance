@@ -1,0 +1,98 @@
+.s-banner{
+	background-color: #5363db;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 600px;
+}
+
+.s-banner__content{
+	display: flex;
+	height: 100%;
+}
+
+.s-banner__form-wrapper,
+.s-banner__text-wrapper{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 45px;
+}
+
+.s-banner__form-wrapper{
+	align-items: flex-end;
+}
+
+.s-banner__form{
+	width: 60.5%;
+	padding: 40px 40px 35px 30px;
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.s-banner__form-heading{
+	font-size: 26px;
+	line-height: 28px;
+	color: #5363db;
+	margin-bottom: 31px;
+}
+
+.s-banner__form-input, select{
+	width: 100%;
+	background: #f2f2f2;
+	font-family: $default-font;
+	font-size: 14px;
+	color: #888888;
+	padding: 18px 10px;
+	margin-bottom: 17px;
+	border-radius: 8px;
+
+	&::placeholder{
+		color: #888888;
+		font-family: $default-font;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus::placeholder{
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+}
+
+.s-banner__input-btn{
+	width: auto;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	background-color: #5b6ceb;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 17px 64px;
+	float: right;
+	margin-top: 14px;
+	cursor: pointer;
+	transition: background .25s ease;
+
+	&:hover{
+		background: $hover-color-blue;
+		transition: background .25s ease;
+	}
+}
+
+.s-banner__main-heading{
+	color: #fff;
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.s-banner__slogan{
+	font-size: 40px;
+	color: #fff;
+}

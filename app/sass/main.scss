@@ -1,0 +1,72 @@
+@import "fonts";
+//@import "sprite"; //Раскоментировать после создания спрайта
+@import "vars";
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: none;
+	vertical-align: baseline;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: #000;
+	font-family: $default-font;
+	overflow-x: hidden;
+}
+
+footer, header, nav, section, main{
+	display: block;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+img{
+	vertical-align: top;
+}
+
+ol, ul{
+	list-style: none;
+}
+
+.clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.wrapper{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container{
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+@import "header";
+@import "content";
+@import "footer";
+@import "media"; // Всегда в конце
