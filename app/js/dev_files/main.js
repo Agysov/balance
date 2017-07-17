@@ -13,13 +13,13 @@ $(document).ready(function(){
 
 	// hover plans btn & name block
 
-	/*$('.section-plans__btn').hover(
+	$('.s-prices__btn').hover(
 		function(){
-			$(this).parent('.section-plans__item').children('.section-plans__name').addClass('section-plans__name-hover');
+			$(this).parent('.s-prices__item').children('.s-prices__price').addClass('s-prices__price-hover');
 		},
 		function(){
-			$(this).parent('.section-plans__item').children('.section-plans__name').removeClass('section-plans__name-hover');
-		});*/
+			$(this).parent('.s-prices__item').children('.s-prices__price').removeClass('s-prices__price-hover');
+		});
 
 	// fixed navbar
 
