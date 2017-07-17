@@ -260,7 +260,6 @@ h4{
 }
 
 .s-about__slider{
-	position: relative;
 	width: 48.7%;
 	float: right;
 	border-radius: 8px;
@@ -469,5 +468,79 @@ h5{
 		background-color: $hover-color-blue;
 		text-decoration: none;
 		transition: all 0.3s ease;
+	}
+}
+
+// s-bloquotes
+
+.s-bloquotes__slider{
+	box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	background-color: #fff;
+
+	.s-bloquotes__slider-item{
+		display: flex;
+		align-items: flex-start;
+	}
+}
+
+
+.s-bloquotes__slider-nav{
+	width: 221px;
+
+	.s-bloquotes__slider-nav-item{
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.slick-arrow{
+		position: absolute;
+		text-indent: -99999px;
+		top: 50%;
+		width: 29px;
+		height: 29px;
+		transform: translateY(-50%);
+		box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		border-radius: 50%;
+		cursor: pointer;
+		z-index: 1;
+		transition: all 0.3s ease;
+	}
+
+	.slick-prev{
+		left: -15px;
+	}
+
+	.slick-next{
+		right: -15px;
+	}
+
+	.slick-dots {
+		position: absolute;
+		left: 50%;
+		bottom: -26px;
+		transform: translate(-50%);
+	}
+
+	.slick-dots li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	.slick-dots li button {
+		background-color: $hover-color-blue;
+		opacity: .5;
+		outline: none;
+		border: none;
+		text-indent: -9999px;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		cursor: pointer;
+	}
+
+	.slick-dots .slick-active button {
+		opacity: 1;
 	}
 }

@@ -11,6 +11,23 @@ $(document).ready(function(){
 		}]
 	});
 
+	$('.s-bloquotes__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.s-bloquotes__slider-nav'
+	});
+
+	$('.s-bloquotes__slider-nav').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.s-bloquotes__slider',
+		dots: true,
+		centerMode: false,
+		focusOnSelect: true
+	});
+
 	// hover plans btn & name block
 
 	$('.s-prices__btn').hover(
