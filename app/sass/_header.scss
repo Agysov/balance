@@ -1,4 +1,6 @@
 .header{
+	width: 100%;
+	z-index: 5000;
 	background: #fff;
 	padding: 16px;
 }
@@ -18,4 +20,9 @@
 .logo{
 	display: inline-block;
 	margin: 0 120px;
+}
+
+.h-scroll{
+	position: fixed;
+	left: 0;
 }
