@@ -15,7 +15,8 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		fade: true,
+		dots: true,
+		fade: false,
 		asNavFor: '.s-bloquotes__slider-nav'
 	});
 
@@ -23,7 +24,7 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		asNavFor: '.s-bloquotes__slider',
-		dots: true,
+		dots: false,
 		centerMode: false,
 		focusOnSelect: true
 	});
