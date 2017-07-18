@@ -32,14 +32,14 @@
 		<header class="header">
 			<div class="container">
 				<nav class="header__nav">
+					<a class="header__logo-wrapper" href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
 					<ul class="nav__ul">
-						<li class="nav__item active"><a class="nav__link" href="#anchor-about">About us</a></li>
-						<li class="nav__item"><a class="nav__link" href="#anchor-reservation">Reservation</a></li>
-						<li class="nav__item"><a class="nav__link" href="#anchor-gallery">Gallery</a></li>
-						<li class="nav__item"><a class="nav__link" href="#"><img class="logo" src="img/logo.png" alt="logo"></a></li>
-						<li class="nav__item"><a class="nav__link" href="#anchor-blog">Blog</a></li>
-						<li class="nav__item"><a class="nav__link" href="#anchor-elements">Elements</a></li>
-						<li class="nav__item"><a class="nav__link" href="#anchor-shop">Shop</a></li>
+						<li class="active"><a class="nav__link" href="#anchor-about">About us</a></li>
+						<li><a class="nav__link" href="#anchor-reservation">Reservation</a></li>
+						<li><a class="nav__link" href="#anchor-gallery">Gallery</a></li>
+						<li class="item-for-center"><a class="nav__link" href="#anchor-blog">Blog</a></li>
+						<li><a class="nav__link" href="#anchor-elements">Elements</a></li>
+						<li><a class="nav__link" href="#anchor-shop">Shop</a></li>
 					</ul>
 				</nav>
 				<div class="mobile-menu-ico">
@@ -56,8 +56,8 @@
 						<div class="s-banner__form-wrapper">
 							<form class="s-banner__form clearfix">
 								<h3 class="s-banner__form-heading">Trial Class</h3>
-								<input class="s-banner__form-input" type="text" name="name" placeholder="Enter your name">
-								<input class="s-banner__form-input" type="text" name="phone" placeholder="Enter your phone">
+								<input class="s-banner__form-input" minlength="2" type="text" name="name" placeholder="Enter your name" required>
+								<input class="s-banner__form-input" type="text" name="phone" placeholder="Enter your phone" required>
 								<select name="select">
 									<option selected="selected">Chose your class</option>
 									<option>Your class 1</option>
@@ -75,7 +75,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-program">
+			<section id="anchor-reservation" class="s-program">
 				<div class="container">
 					<h2>Yoga FEATURE PROGRAM</h2>
 					<p class="s-program__classes">Our Classes</p>
@@ -115,7 +115,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-gallery">
+			<section id="anchor-gallery" class="s-gallery">
 				<div class="s-gallery__wrapper clearfix">
 					<div class="s-gallery__item">
 						<img src="img/gallery-1.png" alt="yoga-img">
@@ -143,7 +143,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-about">
+			<section id="anchor-about" class="s-about">
 				<div class="container">
 					<div class="clearfix">
 						<div class="s-about__item">
@@ -161,7 +161,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-features" style="background-image: url('img/features-bg.png');">
+			<section id="anchor-elements" class="s-features" style="background-image: url('img/features-bg.png');">
 				<div class="container">
 					<div class="s-features__wrapper">
 						<div class="s-features__inner">
@@ -207,108 +207,140 @@
 					</div>
 				</div>
 			</section>
-			<section class="s-prices">
-				<div class="container">
-					<div class="s-prices__wrapper">
-						<div class="s-prices__item">
-							<p class="s-prices__price"><span class="s-prices__value">49</span> / Month</p>
-							<p class="s-prices__string">eNTRY DATE: MON – FRI</p>
-							<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
-							<p class="s-prices__string">NUTRITION ADVICER: NO</p>
-							<a class="s-prices__btn my-hover" href="#">Buy now</a>
-						</div>
-						<div class="s-prices__item">
-							<p class="s-prices__price"><span class="s-prices__value">69</span> / Month</p>
-							<p class="s-prices__string">eNTRY DATE: MON – FRI</p>
-							<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
-							<p class="s-prices__string">NUTRITION ADVICER: YES</p>
-							<a class="s-prices__btn my-hover" href="#">Buy now</a>
-						</div>
-						<div class="s-prices__item">
-							<p class="s-prices__price"><span class="s-prices__value">99</span> / Month</p>
-							<p class="s-prices__string">eNTRY DATE: MON – sun</p>
-							<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
-							<p class="s-prices__string">NUTRITION ADVICER: YES</p>
-							<a class="s-prices__btn my-hover" href="#">Buy now</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="s-bloquotes">
-				<div class="container">
-					<div class="s-bloquotes__wrapper">
-						<div class="s-bloquotes__slider">
-							<div class="s-bloquotes__slider-item">
-								<img src="img/quote-1.png" alt="yoga-trainer">
-								<div class="s-bloquotes__slider-quote-box">
-									<p class="s-bloquotes__slider-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p class="s-bloquotes__slider-position">Trainer</p>
-									<p class="s-bloquotes__slider-name">Laura Shepard</p>
-								</div>
+			<div class="s-prices__outer-box">
+				<section id="anchor-shop" class="s-prices">
+					<div class="container">
+						<div class="s-prices__wrapper">
+							<div class="s-prices__item">
+								<p class="s-prices__price"><span class="s-prices__value">49</span> / Month</p>
+								<p class="s-prices__string">eNTRY DATE: MON – FRI</p>
+								<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
+								<p class="s-prices__string">NUTRITION ADVICER: NO</p>
+								<a class="s-prices__btn my-hover" href="#">Buy now</a>
 							</div>
-							<div class="s-bloquotes__slider-item">
-								<img src="img/quote-2.png" alt="yoga-trainer">
-								<div class="s-bloquotes__slider-quote-box">
-									<p class="s-bloquotes__slider-text">SLIDE-2 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p class="s-bloquotes__slider-position">Trainer</p>
-									<p class="s-bloquotes__slider-name">Sara Taylor</p>
-								</div>
+							<div class="s-prices__item">
+								<p class="s-prices__price"><span class="s-prices__value">69</span> / Month</p>
+								<p class="s-prices__string">eNTRY DATE: MON – FRI</p>
+								<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
+								<p class="s-prices__string">NUTRITION ADVICER: YES</p>
+								<a class="s-prices__btn my-hover" href="#">Buy now</a>
 							</div>
-							<div class="s-bloquotes__slider-item">
-								<img src="img/quote-1.png" alt="yoga-trainer">
-								<div class="s-bloquotes__slider-quote-box">
-									<p class="s-bloquotes__slider-text">SLIDE-3 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p class="s-bloquotes__slider-position">Trainer</p>
-									<p class="s-bloquotes__slider-name">Jessica Parker</p>
-								</div>
-							</div>
-							<div class="s-bloquotes__slider-item">
-								<img src="img/quote-2.png" alt="yoga-trainer">
-								<div class="s-bloquotes__slider-quote-box">
-									<p class="s-bloquotes__slider-text">SLIDE-4 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p class="s-bloquotes__slider-position">Trainer</p>
-									<p class="s-bloquotes__slider-name">Oda Ray</p>
-								</div>
-							</div>
-						</div>
-						<div class="s-bloquotes__slider-nav-wrapper">
-							<div class="s-bloquotes__slider-nav">
-								<div class="s-bloquotes__slider-nav-item">
-									<img src="img/quote-1.png" alt="yoga-trainer">
-									<div class="s-bloquotes__slider-nav-name-box">
-										<p>Laura Shepard</p>
-										<p>Trainer</p>
-									</div>
-								</div>
-								<div class="s-bloquotes__slider-nav-item">
-									<img src="img/quote-2.png" alt="yoga-trainer">
-									<div class="s-bloquotes__slider-nav-name-box">
-										<p>Sara Taylor</p>
-										<p>Trainer</p>
-									</div>
-								</div>
-								<div class="s-bloquotes__slider-nav-item">
-									<img src="img/quote-1.png" alt="yoga-trainer">
-									<div class="s-bloquotes__slider-nav-name-box">
-										<p>Jessica Parker</p>
-										<p>Trainer</p>
-									</div>
-								</div>
-								<div class="s-bloquotes__slider-nav-item">
-									<img src="img/quote-2.png" alt="yoga-trainer">
-									<div class="s-bloquotes__slider-nav-name-box">
-										<p>Oda Ray</p>
-										<p>Trainer</p>
-									</div>
-								</div>
+							<div class="s-prices__item">
+								<p class="s-prices__price"><span class="s-prices__value">99</span> / Month</p>
+								<p class="s-prices__string">eNTRY DATE: MON – sun</p>
+								<p class="s-prices__string">ENTRY TIME: 8A.M – 8P.M</p>
+								<p class="s-prices__string">NUTRITION ADVICER: YES</p>
+								<a class="s-prices__btn my-hover" href="#">Buy now</a>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+				<section class="s-bloquotes">
+					<div class="container">
+						<div class="s-bloquotes__wrapper">
+							<div class="s-bloquotes__slider">
+								<div class="s-bloquotes__slider-item">
+									<img src="img/quote-1.png" alt="yoga-trainer">
+									<div class="s-bloquotes__slider-quote-box">
+										<p class="s-bloquotes__slider-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<p class="s-bloquotes__slider-position">Trainer</p>
+										<p class="s-bloquotes__slider-name">Laura Shepard</p>
+									</div>
+								</div>
+								<div class="s-bloquotes__slider-item">
+									<img src="img/quote-2.png" alt="yoga-trainer">
+									<div class="s-bloquotes__slider-quote-box">
+										<p class="s-bloquotes__slider-text">SLIDE-2 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<p class="s-bloquotes__slider-position">Trainer</p>
+										<p class="s-bloquotes__slider-name">Sara Taylor</p>
+									</div>
+								</div>
+								<div class="s-bloquotes__slider-item">
+									<img src="img/quote-1.png" alt="yoga-trainer">
+									<div class="s-bloquotes__slider-quote-box">
+										<p class="s-bloquotes__slider-text">SLIDE-3 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<p class="s-bloquotes__slider-position">Trainer</p>
+										<p class="s-bloquotes__slider-name">Jessica Parker</p>
+									</div>
+								</div>
+								<div class="s-bloquotes__slider-item">
+									<img src="img/quote-2.png" alt="yoga-trainer">
+									<div class="s-bloquotes__slider-quote-box">
+										<p class="s-bloquotes__slider-text">SLIDE-4 dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<p class="s-bloquotes__slider-position">Trainer</p>
+										<p class="s-bloquotes__slider-name">Oda Ray</p>
+									</div>
+								</div>
+							</div>
+							<div class="s-bloquotes__slider-nav-wrapper">
+								<div class="s-bloquotes__slider-nav">
+									<div class="s-bloquotes__slider-nav-item">
+										<img src="img/quote-1.png" alt="yoga-trainer">
+										<div class="s-bloquotes__slider-nav-name-box">
+											<p>Laura Shepard</p>
+											<p>Trainer</p>
+										</div>
+									</div>
+									<div class="s-bloquotes__slider-nav-item">
+										<img src="img/quote-2.png" alt="yoga-trainer">
+										<div class="s-bloquotes__slider-nav-name-box">
+											<p>Sara Taylor</p>
+											<p>Trainer</p>
+										</div>
+									</div>
+									<div class="s-bloquotes__slider-nav-item">
+										<img src="img/quote-1.png" alt="yoga-trainer">
+										<div class="s-bloquotes__slider-nav-name-box">
+											<p>Jessica Parker</p>
+											<p>Trainer</p>
+										</div>
+									</div>
+									<div class="s-bloquotes__slider-nav-item">
+										<img src="img/quote-2.png" alt="yoga-trainer">
+										<div class="s-bloquotes__slider-nav-name-box">
+											<p>Oda Ray</p>
+											<p>Trainer</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 		</main>
-		<footer class="footer" id="anchor-contact">
-		
+		<footer id="anchor-blog" class="s-footer">
+			<div class="s-footer__info">
+				<div class="container">
+					<div class="s-footer__info-wrapper">
+						<div class="s-footer__about">
+							<h5>About</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m inim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div class="s-footer__contact">
+							<h5>CONTACT US</h5>
+							<ul class="s-footer__links-ul">
+								<li><a href="#">5419 Joseph Mountains<br>Apt. 716</a></li>
+								<li><a href="tel:+123456789">+1 234 567 89</a><br><a href="tel:+123467890">+1 234 678 90</a></li>
+								<li><a href="mailto:joga.info@example.com">joga.info@example.com</a></li>
+								<li><a href="#">www.example.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="s-footer__social-ul">
+						<li><a href="#" alt="social-ico" title="pinterest"><img src="img/pinterest.png" alt="social-ico"></a></li>
+						<li><a href="#" alt="social-ico" title="twitter"><img src="img/twitter.png" alt="social-ico"></a></li>
+						<li><a href="#" alt="social-ico" title="facebook"><img src="img/facebook.png" alt="social-ico"></a></li>
+						<li><a href="#" alt="social-ico" title="google+"><img src="img/google.png" alt="social-ico"></a></li>
+						<li><a href="#" alt="social-ico" title="instagram"><img src="img/instagram.png" alt="social-ico"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="s-footer__copyright">
+				<div class="container">
+					<p>Copyright<span>©</span>2016-2017 Yoga classes</p>
+				</div>
+			</div>
 		</footer>
 	</div>
 	<script src="js/vendor.min.js"></script>

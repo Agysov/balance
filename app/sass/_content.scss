@@ -112,7 +112,7 @@ select{
 }
 
 .s-program{
-	padding-top: 112px;
+	padding: 112px 0 101px;
 }
 
 h2{
@@ -192,10 +192,11 @@ h4{
 		display: block;
 		width: 0;
 		height: 100%;
+		opacity: .8;
 		position: absolute;
 		top: 0;
 		left: 0;
-		transition: width .5s ease;
+		transition: all .3s ease;
 	}
 
 	&:after{
@@ -220,8 +221,7 @@ h4{
 		&:before{
 			background-color: $main-color;
 			width: 100%;
-			opacity: .8;
-			transition: width .5s ease;
+			transition: width .3s ease;
 			z-index: 1;
 		}
 
@@ -413,6 +413,14 @@ h5{
 
 // prices
 
+.s-prices__outer-box{
+	background-image: url(../img/lotos-bg.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	background-position: 100% 100%;
+}
+
 .s-prices{
 	padding: 100px 0 105px 0;
 }
@@ -517,9 +525,12 @@ h5{
 
 // s-bloquotes
 
+.s-bloquotes{
+	padding-bottom: 201px;
+}
+
 .s-bloquotes__wrapper{
 	position: relative;
-	margin-bottom: 100px;
 }
 
 .s-bloquotes__slider{
@@ -541,30 +552,43 @@ h5{
 
 	.slick-dots {
 		position: absolute;
-		right: -30px;
+		right: -44px;
 		top: 50%;
 		transform: translateY(-50%);
 	}
 
 	.slick-dots li {
 		display: block;
-		margin: 0 5px;
+		margin: 18px 0;
 	}
 
 	.slick-dots li button {
-		background-color: $hover-color-blue;
-		opacity: .5;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
 		outline: none;
-		border: none;
 		text-indent: -9999px;
+		border: 2px solid #d7d7d7;
 		border-radius: 50%;
-		width: 12px;
-		height: 12px;
 		cursor: pointer;
 	}
 
 	.slick-dots .slick-active button {
-		opacity: 1;
+		border-color: $main-color;
+
+		&:before{
+			content: "";
+			display: block;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background-color: $main-color;
+		}
 	}
 }
 

@@ -61,23 +61,22 @@ $(document).ready(function(){
 
 	// go to anchor
 
-	/*$(".nav__ul").on("click","a", function (event) {
+	$(".nav__ul").on("click","a", function (event) {
+
 		var id  = $(this).attr('href'),
-			headerHeight = $('.header').outerHeight();
+				headerHeight = $('.header').outerHeight();
 		event.preventDefault();
 
-		$('.nav__item').removeClass('active');
-		$(this).parent('.nav__item').addClass('active');
+		$(".nav__ul").children('li').removeClass('active');
+		$(this).parent('li').addClass('active');
 
 		if ($(id).length){
 
 			var anchor = $(id).offset().top - headerHeight;
-  			$('body, html').animate({scrollTop: anchor}, 600);
+			$('body, html').animate({scrollTop: anchor}, 600);
 
-		} else { alert('Такой секции небыло в задании'); }
-
-
-	});*/
+		} else { alert('Такой секции нет!'); }
+	});
 
 	// burger ico
 
