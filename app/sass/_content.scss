@@ -1,9 +1,9 @@
 .s-banner{
+	height: 600px;
 	background-color: #5363db;
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	height: 600px;
 }
 
 .s-banner__content{
@@ -16,21 +16,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 45px;
 }
 
 .s-banner__form-wrapper{
 	align-items: flex-end;
-	@extend %s-banner__content-items;
-}
-
-.s-banner__text-wrapper{
+	padding: 45px;
 	@extend %s-banner__content-items;
 }
 
 .s-banner__form{
-	width: 60.5%;
-	padding: 40px 35px 35px 30px;
+	width: 60.6%;
+	padding: 36px 35px 35px 30px;
+	margin-bottom: 9px;
 	background: #fff;
 	border-radius: 20px;
 	box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
@@ -40,7 +37,7 @@
 	font-size: 26px;
 	line-height: 28px;
 	color: #5363db;
-	margin-bottom: 31px;
+	margin: 0 0 27px 3px;
 }
 
 %input-select-style{
@@ -65,34 +62,13 @@
 	}
 }
 
-.form-group{
-	position: relative;
-}
-
-label.error{
-	display: inline-block;
-	font-size: 12px;
-	position: absolute;
-	top: -18px;
-	left: 0;
-	color: #EA422A;
-}
-
-select{
-	margin-bottom: 31px;
-	padding: 16px 10px;
-	@extend %input-select-style;
-	@extend %error-border;
-	@extend %valid-border;
-}
-
 .s-banner__form-input{
 	@extend %input-select-style;
 	@extend %error-border;
 	@extend %valid-border;
 
 	font-size: 14px;
-	padding: 18px 10px;
+	padding: 17px 10px;
 
 	&::placeholder{
 		color: #888;
@@ -110,13 +86,34 @@ select{
 	}
 }
 
+.form-group{
+	position: relative;
+}
+
+label.error{
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	top: -18px;
+	left: 0;
+	color: #EA422A;
+}
+
+select{
+	margin-bottom: 31px;
+	padding: 15px 10px;
+	@extend %input-select-style;
+	@extend %error-border;
+	@extend %valid-border;
+}
+
 .s-banner__input-btn{
 	display: block;
 	margin: 0 0 0 auto;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 700;
-	padding: 17px 64px;
+	padding: 16px 64px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 	border-radius: 8px;
 	background-color: #5b6ceb;
@@ -130,17 +127,25 @@ select{
 	}
 }
 
+.s-banner__text-wrapper{
+	padding: 45px 49px;
+	@extend %s-banner__content-items;
+}
+
 .s-banner__main-heading{
 	color: #fff;
 	font-size: 48px;
 	font-weight: 700;
 	text-transform: uppercase;
+	margin-bottom: 26px;
 }
 
 .s-banner__slogan{
 	font-family: "FreeStyleScriptRegular";
 	font-size: 40px;
 	color: #fff;
+	line-height: 1.2;
+	margin-bottom: 24px;
 }
 
 .s-program{
@@ -273,7 +278,7 @@ h4{
 }
 
 .s-about{
-	padding: 125px 0 125px 0;
+	padding: 125px 0 125px;
 }
 
 .s-about__item{
@@ -397,7 +402,7 @@ h4{
 
 .s-features{
 	position: relative;
-	padding: 125px 0 77px 0;
+	padding: 125px 0 77px;
 	background-color: #5363db;
 	background-size:cover;
 	background-repeat: no-repeat;
