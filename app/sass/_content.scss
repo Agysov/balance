@@ -357,19 +357,32 @@ h4{
 	}
 
 	.slick-dots li button {
-		background-color: $hover-color-blue;
-		opacity: .5;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
 		outline: none;
-		border: none;
 		text-indent: -9999px;
+		border: 2px solid #d7d7d7;
 		border-radius: 50%;
-		width: 12px;
-		height: 12px;
 		cursor: pointer;
 	}
 
 	.slick-dots .slick-active button {
-		opacity: 1;
+		border-color: $main-color;
+
+		&:before{
+			content: "";
+			display: block;
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background-color: $main-color;
+		}
 	}
 }
 
@@ -514,7 +527,7 @@ h5{
 	color: #555;
 	font-size: 18px;
 	line-height: 24px;
-	padding: 20px 72px 20px;
+	padding: 20px 72px;
 	text-transform: uppercase;
 	text-align: left;
 
@@ -710,13 +723,13 @@ h5{
 	.s-bloquotes__slider-nav-name-box{
 		padding-left: 11px;
 
-		& :nth-child(1){
+		:nth-child(1){
 			color: #555;
 			font-weight: 700;
 			line-height: 22px;
 		}
 
-		& :nth-child(2){
+		:nth-child(2){
 			color: #777;
 			font-size: 12px;
 			line-height: 22px;
