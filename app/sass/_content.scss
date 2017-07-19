@@ -49,19 +49,50 @@
 	font-family: $default-font;
 	line-height: 16px;
 	color: #888;
-	padding: 18px 10px;
 	margin-bottom: 17px;
 	border-radius: 8px;
 }
 
+%error-border{
+	&.error{
+		box-shadow: 0px 0px 7px 0px rgba(234,66,42,1);
+	}
+}
+
+%valid-border{
+	&.valid{
+		box-shadow: 0px 0px 7px 0px rgba(0,189,55,1);
+	}
+}
+
+.form-group{
+	position: relative;
+}
+
+label.error{
+	display: inline-block;
+	font-size: 12px;
+	position: absolute;
+	top: -18px;
+	left: 0;
+	color: #EA422A;
+}
+
 select{
 	margin-bottom: 31px;
+	padding: 16px 10px;
 	@extend %input-select-style;
+	@extend %error-border;
+	@extend %valid-border;
 }
 
 .s-banner__form-input{
 	@extend %input-select-style;
+	@extend %error-border;
+	@extend %valid-border;
+
 	font-size: 14px;
+	padding: 18px 10px;
 
 	&::placeholder{
 		color: #888;
@@ -80,7 +111,8 @@ select{
 }
 
 .s-banner__input-btn{
-	float: right;
+	display: block;
+	margin: 0 0 0 auto;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 700;

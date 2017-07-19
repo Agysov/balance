@@ -42,20 +42,18 @@ $(document).ready(function(){
 	// fixed navbar
 
 	/*$(window).scroll(function(){
-
 		var menu = $('.header'),
-			menuScrollClass = 'h-scroll',
-			headerHeight = menu.outerHeight();
-
-		menu.css('top','-' + headerHeight + 'px');
+				menuParent= menu.parent(),
+				menuScrollClass = 'header-fixed',
+				headerHeight = menu.outerHeight();
 
 		if ($(this).scrollTop() > 0) {
-			menu.addClass(menuScrollClass).css('top', '0');
-			$('.wrapper').css('padding-top', headerHeight + 'px');
+			menu.addClass(menuScrollClass);
+			menuParent.css('padding-top', headerHeight + 'px');
 
 		} else {
 			menu.removeClass(menuScrollClass);
-			$('.wrapper').css('padding-top', '0');
+			menuParent.css('padding-top', '0');
 		};
 	});*/
 
@@ -85,6 +83,41 @@ $(document).ready(function(){
 		$(this).toggleClass('is-active');
 		$('.header__nav').toggleClass('nav-visible');
 	});
+////
+
+$.validator.addMethod('regExp', function(value, element, params) {
+    var expression = new RegExp(params);
+    return this.optional(element) || expression.test(value);
+});
+
+	$("#s-banner__form").validate({
+		rules: {
+			form_name: {
+				required: true,
+				minlength: 2,
+				regExp: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/
+			},
+			form_tel: {
+				required: true,
+				regExp: /^[+]{1}[0-9]{9,13}$/
+			},
+			form_select: {
+				required: true
+			}
+		},
+		messages: {
+			form_name: {
+				required:	'Please enter your name',
+				regExp: 'This is not your real name'
+			},
+			form_tel: {
+				required:	'Please enter your phone number',
+				regExp: 'Example +456995588'
+			},
+			form_select: 'Please make your choice'
+		}
+	});
 
 
+////
 });
