@@ -74,10 +74,13 @@ $(document).ready(function(){
 		$(this).toggleClass('is-active');
 		$('.nav__ul').toggleClass('nav-visible');
 
-		$(".nav__ul").on("click","a", function (event) {
-			event.preventDefault();
-			$(".nav__ul").removeClass('nav-visible');
+		if ($("#menuButton").hasClass("is-active")) {
+				$(".nav__ul").on("click","a", function (event) {
+				event.preventDefault();
+				$(".nav__ul").removeClass('nav-visible');
+				$('#menuButton').removeClass('is-active')
 		});
+		} else { return; }
 	});
 
 $.validator.addMethod('regExp', function(value, element, params) {
