@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$('.s-about__slider').slick({
 		dots: false,
 		responsive: [{
@@ -30,7 +29,6 @@ $(document).ready(function(){
 	});
 
 	// hover plans btn & name block
-
 	$('.s-prices__btn').hover(
 		function(){
 			$(this).parent('.s-prices__item').children('.s-prices__price').addClass('s-prices__price-hover');
@@ -40,8 +38,7 @@ $(document).ready(function(){
 		});
 
 	// fixed navbar
-
-	/*$(window).scroll(function(){
+	$(window).scroll(function(){
 		var menu = $('.header'),
 				menuParent= menu.parent(),
 				menuScrollClass = 'header-fixed',
@@ -55,35 +52,33 @@ $(document).ready(function(){
 			menu.removeClass(menuScrollClass);
 			menuParent.css('padding-top', '0');
 		};
-	});*/
+	});
 
 	// go to anchor
-
 	$(".nav__ul").on("click","a", function (event) {
+		event.preventDefault();
 
 		var id  = $(this).attr('href'),
 				headerHeight = $('.header').outerHeight();
-		event.preventDefault();
 
 		$(".nav__ul").children('li').removeClass('active');
 		$(this).parent('li').addClass('active');
 
-		if ($(id).length){
-
 			var anchor = $(id).offset().top - headerHeight;
 			$('body, html').animate({scrollTop: anchor}, 600);
-
-		} else { alert('Такой секции нет!'); }
 	});
 
 	// burger ico
-
 	$('#menuButton').on('click', function (event){
 		event.preventDefault();
 		$(this).toggleClass('is-active');
-		$('.header__nav').toggleClass('nav-visible');
+		$('.nav__ul').toggleClass('nav-visible');
+
+		$(".nav__ul").on("click","a", function (event) {
+			event.preventDefault();
+			$(".nav__ul").removeClass('nav-visible');
+		});
 	});
-////
 
 $.validator.addMethod('regExp', function(value, element, params) {
     var expression = new RegExp(params);
@@ -117,7 +112,4 @@ $.validator.addMethod('regExp', function(value, element, params) {
 			form_select: 'Please make your choice'
 		}
 	});
-
-
-////
 });

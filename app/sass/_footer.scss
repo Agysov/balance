@@ -60,6 +60,7 @@
 		}
 
 		&:nth-child(2){
+			margin-bottom: 14px;
 
 			&:before{
 				@extend %li-before;

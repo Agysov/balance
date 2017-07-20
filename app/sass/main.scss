@@ -21,7 +21,8 @@ body{
 	font-weight: 400;
 	color: #000;
 	font-family: $default-font;
-	overflow-x: hidden;
+	background:url(about:blank);
+	background-attachment: fixed;
 }
 
 footer, header, nav, section, main{
@@ -57,6 +58,7 @@ ol, ul{
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .container{

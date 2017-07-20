@@ -115,7 +115,7 @@ gulp.task('watch', ['vendor-sass', 'style-sass', 'vendor-js', 'script-js', 'html
 });
 
 gulp.task('imagemin', function() {
-	return gulp.src(['!app/img/imgForSprite/**/*', 'app/img/**/*'])
+	return gulp.src(['app/img/**/*'])
 	.pipe(cache(imagemin()))
 	.pipe(gulp.dest('dist/img'));
 });
